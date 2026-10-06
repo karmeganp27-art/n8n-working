@@ -1,0 +1,75 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 5,
+              "triggerAtMinute": 5
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e0bd2e2d-baab-4ac6-b34a-741c65906978",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "sendTo": "karmegan.p27@gmail.com",
+        "subject": "i have work",
+        "message": "hii bro",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "c4ae7c08-3c23-42dd-ad30-9b1e13b733ba",
+      "name": "Send a message",
+      "webhookId": "80eb459a-8716-4f08-9a6b-d512dc39a334",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "wgZPTWAezYXdvVvH",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "b5aac9f2-c775-434d-903d-3b15e1250d7a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "518ce5db0018756c043d96773e0c458007c2826a3de8de74057f441b02786eb3"
+  },
+  "nodeGroups": [],
+  "id": "fWiNUOLg0gWed3PZ",
+  "tags": []
+}
